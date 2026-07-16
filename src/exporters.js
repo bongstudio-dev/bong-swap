@@ -115,7 +115,9 @@ export function exportGif(renderOpts, durationSec, fps = 15, onProgress) {
       quality: 10,
       width,
       height,
-      workerScript: '/gif.worker.js',
+      // Respect Vite's base path so the worker resolves under /bong-swap/ on
+      // GitHub Pages (and / in local dev).
+      workerScript: import.meta.env.BASE_URL + 'gif.worker.js',
     })
 
     const totalFrames = Math.round(durationSec * fps)
