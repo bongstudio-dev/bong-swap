@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Bong Swap Tool</title>
+    <link rel="preconnect" href="https://api.fontsource.org" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.fontsource.org/v1/fonts/satoshi/index.css"
+    />
+    <style>
+      /* Satoshi via Fontsource CDN. Explicit @font-face fallbacks below
+         guarantee the weights we need are declared even if the index above
+         doesn't expose every weight. */
+      @font-face {
+        font-family: 'Satoshi';
+        font-weight: 400 900;
+        font-display: swap;
+        src: url('https://cdn.fontsource.org/fonts/satoshi:vf@latest/latin-wght-normal.woff2')
+          format('woff2-variations');
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
